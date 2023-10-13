@@ -15,6 +15,10 @@ app.use(cors());
 
 // Availabel Routes
 
+app.get('/', (req, res)=>{
+  res.json("eNoteBook Backend API")
+})
+
 app.use("/api/auth", auth);
 app.use("/api/notes", notes);
 

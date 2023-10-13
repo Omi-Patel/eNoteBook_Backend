@@ -10,9 +10,7 @@ import { connect } from "mongoose";
 
 const connectToMongo = async () => {
   try {
-    await connect(
-      "mongodb+srv://omipatel7113:omipatel7113@merndatabase.6u2jzyu.mongodb.net/eNotebook"
-    );
+    await connect(process.env.MONGO_URI);
     console.log("Connection Successfull!!");
   } catch (error) {
     console.log(error);
